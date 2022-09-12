@@ -7,24 +7,36 @@ function createForm() {
     form.classList.add('form')
 
     formDiv.appendChild(form);
-    form.appendChild(createGeneric("Task"));
-    form.appendChild(createGeneric("Description"));
+    form.appendChild(createGeneric("task"));
+    form.appendChild(createGeneric("description"));
 
     return formDiv;
 }
 
 //Creates a generic form input
 function createGeneric(task) {
+    //Generate row
     const formRow = document.createElement('tr');
-    const formData = document.createElement('td');
-    const formInput = document.createElement('input');
 
+    //Generate Datacell
+    const formData = document.createElement('td');
     formData.innerText = (task);
+
+    //Generate Input for data cell
+    const formInput = document.createElement('input');
+    formInput.setAttribute('type', 'text');
+    formInput.setAttribute('id', `${task}`);
+    formInput.setAttribute('placeholder', `${task}`);
 
     formRow.appendChild(formData);
     formRow.appendChild(formInput);
 
-    return formRow
+    return formRow;
+}
+
+//Creates a status row and input
+function createStatus() {
+
 }
 
 function loadForm() {
