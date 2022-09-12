@@ -1,9 +1,3 @@
-function component() {
-   const element = document.createElement('div');
+import intitialize from "./website";
 
-   element.innerHTML = "Hello World";
-
-   return element;
- }
-
- document.body.appendChild(component());
+intitialize();
