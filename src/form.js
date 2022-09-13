@@ -1,10 +1,10 @@
 //Generates a form for the page
 function createForm() {
     const formDiv = document.createElement('div');
-    formDiv.classList.add('form-div')
+    formDiv.classList.add('form-div');
 
     const form = document.createElement('form');
-    form.classList.add('form')
+    form.classList.add('form');
 
     formDiv.appendChild(form);
     form.appendChild(createGeneric("task"));
@@ -34,9 +34,10 @@ function createGeneric(task) {
     return formRow;
 }
 
-//Creates a status row and input
+//Creates a status row and options to select from
 function createStatus() {
-
+    const formSelect = document.createElement('select');
+    const formOption = document.createElement('option')
 }
 
 function loadForm() {
