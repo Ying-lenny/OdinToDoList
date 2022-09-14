@@ -9,6 +9,8 @@ function createForm() {
     formDiv.appendChild(form);
     form.appendChild(createGeneric("task"));
     form.appendChild(createGeneric("description"));
+    form.appendChild(createStatus());
+    form.appendChild(createCategory());
 
     return formDiv;
 }
@@ -29,15 +31,58 @@ function createGeneric(task) {
     formInput.setAttribute('placeholder', `${task}`);
 
     formRow.appendChild(formData);
-    formRow.appendChild(formInput);
+    formRow.append(formInput);
 
     return formRow;
 }
 
 //Creates a status row and options to select from
 function createStatus() {
+    const formRow = document.createElement('tr');
+
+    //Generate Datacell
+    const formData = document.createElement('td');
+    formData.innerText = 'Status';
+
     const formSelect = document.createElement('select');
-    const formOption = document.createElement('option')
+
+    const formOptionU = document.createElement('option');
+    formOptionU.setAttribute('value', 'unfinished');
+    formOptionU.innerText = 'Unfinished';
+
+    const formOptionF = document.createElement('option');
+    formOptionF.setAttribute('value', 'finished');
+    formOptionF.innerText = 'Finished';
+
+    formSelect.appendChild(formOptionU);
+    formSelect.appendChild(formOptionF);
+
+    formRow.appendChild(formData);
+    formRow.appendChild(formSelect);
+    
+    return formRow;
+}
+
+//Creates a status row and options to select from
+function createCategory() {
+    const formRow = document.createElement('tr');
+
+    //Generate Datacell
+    const formData = document.createElement('td');
+    formData.innerText = 'Category';
+
+    const formSelect = document.createElement('select');
+
+    const formCategory = document.createElement('option');
+    formCategory.setAttribute('value', 'unfinished');
+    formCategory.innerText = 'Category';
+
+    formSelect.appendChild(formCategory);
+
+    formRow.appendChild(formData);
+    formRow.appendChild(formSelect);
+    
+    return formRow;
 }
 
 function loadForm() {
