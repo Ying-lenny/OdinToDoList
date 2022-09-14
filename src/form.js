@@ -14,6 +14,7 @@ function createForm() {
     form.appendChild(createStatus());
     form.appendChild(createCategory());
     form.appendChild(createDate());
+    form.appendChild(createSubmit());
 
     return formDiv;
 }
@@ -105,6 +106,15 @@ function createDate() {
     formRow.appendChild(formDate);
 
     return formRow
+}
+
+function createSubmit() {
+    //Generate Datacell
+    const formButton = document.createElement('button');
+    formButton.innerText = 'Submit';
+    formButton.setAttribute('id', 'button');
+
+    return formButton;
 }
 
 function loadForm() {
