@@ -1,3 +1,5 @@
+const {format} = require('date-fns');
+
 //Generates a form for the page
 function createForm() {
     const formDiv = document.createElement('div');
@@ -11,6 +13,7 @@ function createForm() {
     form.appendChild(createGeneric("description"));
     form.appendChild(createStatus());
     form.appendChild(createCategory());
+    form.appendChild(createDate());
 
     return formDiv;
 }
@@ -83,6 +86,25 @@ function createCategory() {
     formRow.appendChild(formSelect);
     
     return formRow;
+}
+
+//Create a due date for the task
+function createDate() {
+    const formRow = document.createElement('tr');
+
+    //Generate Datacell
+    const formData = document.createElement('td');
+    formData.innerText = 'Date';
+
+    const formDate = document.createElement('input');
+
+    formDate.setAttribute('type', 'date');
+    formDate.setAttribute('id', 'date');
+
+    formRow.appendChild(formData);
+    formRow.appendChild(formDate);
+
+    return formRow
 }
 
 function loadForm() {
