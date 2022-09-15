@@ -1,9 +1,11 @@
+'use strict'
 const {format} = require('date-fns');
 
 //Generates a form for the page
 function createForm() {
     const formDiv = document.createElement('div');
     formDiv.classList.add('form-div');
+    formDiv.setAttribute('id','form-div');
 
     const form = document.createElement('form');
     form.classList.add('form');
@@ -110,17 +112,30 @@ function createDate() {
 
 function createSubmit() {
     //Generate Datacell
-    const formButton = document.createElement('button');
-    formButton.innerText = 'Submit';
-    formButton.setAttribute('id', 'button');
+    const formButton = document.createElement('input');
+    formButton.setAttribute('id', 'submit');
+    formButton.setAttribute('type', 'submit');
+    formButton.setAttribute('value', 'submit');
 
     return formButton;
+}
+
+function detectSubmit() {
+    const button = document.getElementById('submit');
+    const task = document.querySelector('#task');
+
+
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log(task.innerText)
+    });
 }
 
 function loadForm() {
     const main = document.getElementById('main');
     //main.textContent = '';
     main.appendChild(createForm());
+    detectSubmit();
 }
 
 export default loadForm;
