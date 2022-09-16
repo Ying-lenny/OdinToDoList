@@ -122,7 +122,7 @@ function createSubmit() {
 
 function detectSubmit() {
     const button = document.getElementById('submit');
-    const task = document.querySelector('#task');
+    const $task = document.querySelector('#task');
 
 
     button.addEventListener('click', (e) => {
