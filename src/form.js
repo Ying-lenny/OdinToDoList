@@ -134,8 +134,6 @@ function detectSubmit() {
 function loadForm() {
     const main = document.getElementById('main');
     //main.textContent = '';
-    main.appendChild(createForm());
-    detectSubmit();
 }
 
 export default loadForm;
