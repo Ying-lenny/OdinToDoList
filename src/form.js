@@ -1,6 +1,3 @@
-'use strict'
-const {format} = require('date-fns');
-
 //Generates a form for the page
 function createForm() {
     const formDiv = document.createElement('div');

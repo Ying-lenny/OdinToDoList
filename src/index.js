@@ -1,3 +1,3 @@
-import intitialize from "./website";
+import UI from "./modules/website";
 
-intitialize();
+document.addEventListener('DOMContentLoaded', UI.printOnLoad);
