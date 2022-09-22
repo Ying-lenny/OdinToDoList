@@ -18,8 +18,8 @@ body {
     border-radius: 5px;
 }
 
-input {
-    width: 100%;
+input, select {
+    width: 200px;
     padding: 12px 20px;
     margin: 0.5em 0 0.5em 0.5em;
     box-sizing: border-box;
@@ -28,25 +28,29 @@ input {
     color: white;
 }
 
-select {
-    width: 100%;
-    padding: 16px 20px;
-    border: 1px #e3e3e3 solid;
-    background-color: #3a3b3e;
-    color: white;
-    margin: 0.5em 0 0.5em 0.5em;
-  }
-
-  button {
+#submit {
     width: 100%;
     padding: 16px 20px;
     border: 1px #e3e3e3 solid;
     background-color: #41444d;
     color: white;
     margin: 0.5em;
-  }
+}
 
 button:hover {
     background-color: #70727b;
     color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+label {
+    /* Uniform size & alignment */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
 }

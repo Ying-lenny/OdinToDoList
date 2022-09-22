@@ -6,10 +6,48 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="icon" type="images/x-icon" href="./images/logo.png">
   </head>
+
   <body>
    <div id="content">
-    <div class="form-div">
-      
+    <div class="navbar" id="navbar"></div>
+    <div id="main" class="main">
+      <div class="form-div" id="form-div">
+        <form class="form">
+          <ul>
+            <li>
+              <label for="task">Task</label>
+              <input id="task" type="text" placeholder="task">
+            </li>
+            
+            <li>
+              <label for="description">description</label>
+              <input id="description" type="description" placeholder="description">
+            </li>
+
+            <li>
+              <label for="status">status</label>
+              <select id="status">
+                <option value="unfinished">Unfinished</option>
+                <option value="finished">Finished</option>
+              </select>
+            </li>
+
+            <li>
+				<label for="category">category</label>
+				<select>
+					<option value="none">None</option>
+				</select>
+            </li>
+
+            <li>
+				<label for="date">date</label>
+				<input id="date" type="date">
+			</li>
+
+          </ul>
+          <input id="submit" type="submit" value="submit">
+        </form>
+      </div>
     </div>
     <script src="main.js"></script>
    </div>
