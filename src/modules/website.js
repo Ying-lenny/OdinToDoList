@@ -13,5 +13,6 @@ export default class UI {
 
     static print() {
         console.log('Hi')
+        
     }
 };
